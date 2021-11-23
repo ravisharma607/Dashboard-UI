@@ -1,0 +1,301 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'popins',sans-serif;
+}
+:root{
+    --btn-color:#f05462;
+    --menu-color: #12232E;
+  --body-color:#f1f1f1;
+  --nav-color:white;
+  --card-color:white;
+  --search-color:#f1f1f1;
+  --input-color:black;
+}
+
+.dark{
+    --btn-color:#f05462;
+    --menu-color: #072752;
+    --body-color:rgb(26, 4, 4);
+    --nav-color:rgb(101, 46, 230);
+    --card-color:rgb(5, 255, 255);
+    --search-color:rgb(2, 30, 34);
+    --input-color:white;
+}
+#moon{
+    cursor: pointer;
+}
+body{
+    min-height:100vh;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1,h2{
+    color:#444;
+}
+h3{
+    color:#999;
+}
+.btn{
+    background:var(--btn-color);
+    color:white;
+    padding:5px 10px;
+    font-weight: bold;
+    text-align:center;
+    border-style: none;
+    border-radius:4px;
+}
+.btn:hover{
+    color:var(--btn-color);
+    background:white;
+    padding:3px 8px;
+    border:2px solid #f05462;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:15px 10px;
+    border-bottom: 2px solid #999;
+}
+.side-menu{
+    position:fixed;
+    /* background: #12232E; */
+    background: var(--menu-color);
+    width:20vw;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .brand{
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side-menu .brand h1{
+    color: rgb(130, 10, 243);
+}
+.side-menu .brand span{
+    color:rgb(0, 255, 255);
+    margin:0 3px;
+    font-weight: bold;
+}
+.side-menu li{
+    font-size:1.2rem;
+    padding:10px 40px;
+    font-weight: bold;
+    color:white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.side-menu li span{
+    margin:0 8px;
+}
+.side-menu li:hover{
+    /* background:var(--menu-color); */
+    background: darkcyan;
+    color:#f1f1f1;
+}
+.side-menu ul li #sign-out-img{
+   font-size:2rem;
+}
+.container{
+    position: absolute;
+    right:0;
+    width:80vw;
+    height:100vh;
+    background:var(--body-color);
+}
+.container .header{
+    position: fixed;
+    top:0;
+    right:0;
+    width:80vw;
+    height:10vh;
+    background:var(--nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index:1;
+}
+.container .header .nav{
+    width:90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .search{
+    flex:3;
+    display: flex;
+    justify-content: center;
+}
+.container .header .nav .search input[type=text]{
+    border: none;
+    background:var(--search-color);
+    padding:10px;
+    width:70%;
+    color:var(--input-color);
+}
+.container .header .nav .search button{
+    width:40px;
+    height:40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .header .nav .search button img{
+    width:40px;
+    height:40px;
+}
+.container .header .nav .user{
+    flex:1;
+   display: flex;
+   justify-content:flex-end;
+   align-items: center;
+}
+.container .header .nav .user img{
+    width:40px;
+    height:40px;
+    margin:0 8px;
+}
+/* .mode-icon img{
+    margin:0 0 0 8px;
+} */
+
+
+
+
+.container .content{
+    position: relative;
+    margin-top:12vh;
+}
+.container .content .cards{
+    padding:20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content .cards .card{
+    width:230px;
+    height:150px;
+    background:var(--card-color);
+    margin:4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.container .content .content-2{
+    min-height:50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.container .content .content-2 .recent-payments{
+   min-height:50vh;
+   flex:5;
+   background:var(--card-color);
+   margin:0 25px 25px 40px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   display: flex;
+   flex-direction: column;
+   text-align:center;
+}
+.container .content .content-2 .recent-payments table tbody{
+  line-height:30px;
+}
+.container .content .content-2 .new-students{
+    flex:2;
+    background:var(--card-color);
+    min-height:50vh;
+    margin:0 42px 0 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+.container .content .content-2 .new-students table td:nth-child(1) img{
+    height:40px;
+    width:40px;
+}
+
+
+@media only screen and (max-width:1030px){
+    .side-menu ul li span{
+      display: none;
+    }
+    .side-menu ul li:hover{
+      background:var(--btn-color);
+
+    }
+    .side-menu{
+        align-items: center;
+    }
+    .side-menu .brand{
+        font-size:0.8rem;
+    }
+    .container .content .content-2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .content .content-2 .recent-payments{
+        width:100%;
+        margin:auto;
+        padding:12px;
+    }
+    .container .content .content-2 .new-students{
+        width:100%;
+        margin: 18px auto;
+        padding:12px;
+    }
+    .container{
+        height: auto;
+    }
+}
+@media only screen and (max-width:700px){
+    .side-menu .brand{
+        font-size:1.5vw;
+    }
+    .container .content .cards{
+        align-items: center;
+        justify-content: center;
+    }
+   .container .user a{
+       width:100px;
+       height:auto;
+       font-size:18px;
+   }
+}
+@media only screen and (max-width:500px){
+    .container .header .nav .search input[type=text]{
+        position:relative;
+        width:100%;
+    }
+    .container .header{
+        height:20vh;
+    }
+    .container .header .nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin:8px 0;
+        padding:4px;
+    }
+    .container .content{
+        margin-top:22vh;
+    }
+    .container .header .nav .user{
+        margin-top:12px;
+    }
+}
